@@ -504,7 +504,7 @@ That's it. The game now listens to the cable instead of your microphone.
 
 **Set your game's voice chat to push-to-talk, not open mic.** This matters more than it sounds.
 
-With an open mic, **everything** that reaches the cable goes out live — including takes you're about to discard. Generate a bad one and the whole lobby hears it before you do. Re-roll three times and they hear all three.
+With an open mic, **everything** that reaches the cable goes out live — including takes you're about to discard. Generate a bad one and the whole lobby hears it at the same time you do. Re-roll three times and they hear all three.
 
 With push-to-talk you audition privately (turn **Monitor** on), re-roll until you're happy, then hold the key and play the good one.
 
