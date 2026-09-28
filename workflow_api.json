@@ -1,0 +1,156 @@
+{
+  "4": {
+    "inputs": {
+      "text": [
+        "37",
+        0
+      ],
+      "reference_text": [
+        "7",
+        1
+      ],
+      "cfg_scale": 1,
+      "max_new_tokens": 248,
+      "temperature": 0.9,
+      "top_k": 50,
+      "top_p": 1,
+      "repetition_penalty": 1.1,
+      "depth_temperature": 0.9,
+      "depth_top_k": 50,
+      "depth_top_p": 1,
+      "seed": 181808401,
+      "breeze_model": [
+        "18",
+        0
+      ],
+      "reference_audio": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "BreezeTTS2VoiceClone",
+    "_meta": {
+      "title": "Breeze TTS 2 Voice Clone"
+    }
+  },
+  "5": {
+    "inputs": {
+      "audio": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
+    }
+  },
+  "6": {
+    "inputs": {
+      "audio": "Untitled.mp3"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Load Audio (Reference Voice) Controlled via VBS PANEL"
+    }
+  },
+  "7": {
+    "inputs": {
+      "model": "whisper-large-v3-turbo",
+      "dtype": "auto",
+      "language": "auto",
+      "task": "transcribe",
+      "chunk_length_s": 30,
+      "download_if_missing": true,
+      "audio": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "BreezeWhisperTranscribe",
+    "_meta": {
+      "title": "Breeze TTS 2 Whisper Transcribe (Transcribe Reference)"
+    }
+  },
+  "18": {
+    "inputs": {
+      "model": "bf16 (best quality)",
+      "dtype": "auto",
+      "device": "cuda",
+      "attention": "sageattention",
+      "decode_mode": "cuda_graphs",
+      "download_if_missing": false
+    },
+    "class_type": "BreezeTTS2LoadModel",
+    "_meta": {
+      "title": "Breeze TTS 2 Load Model"
+    }
+  },
+  "32": {
+    "inputs": {
+      "delay_seconds": 0.5,
+      "tail_seconds": 1,
+      "audio": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "AudioDelayPad",
+    "_meta": {
+      "title": "Audio Delay (Pad Silence)"
+    }
+  },
+  "34": {
+    "inputs": {
+      "volume": 0,
+      "audio": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "AudioAdjustVolume",
+    "_meta": {
+      "title": "Adjust Audio Volume"
+    }
+  },
+  "35": {
+    "inputs": {
+      "model": "whisper-large-v3-turbo",
+      "dtype": "auto",
+      "language": "auto",
+      "task": "translate",
+      "chunk_length_s": 30,
+      "download_if_missing": true,
+      "audio": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "BreezeWhisperTranscribe",
+    "_meta": {
+      "title": "Breeze TTS 2 Whisper Transcribe (Transcribe Your Speech)"
+    }
+  },
+  "37": {
+    "inputs": {
+      "text_0": "Those idiots don't know what they're walking into. I'll rattle their heads. You take them out.",
+      "text": [
+        "35",
+        1
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "41": {
+    "inputs": {
+      "audio": "Breach.wav"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Load Audio (Your Recordings) Controlled via VBS PANEL)"
+    }
+  }
+}
